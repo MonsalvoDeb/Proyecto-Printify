@@ -62,14 +62,16 @@ button:hover{
     position: relative;
     filter: blur(5px);
 }
+
 .cajas{
     padding: 0;
     margin: 0;
     position: absolute ;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+    left: 25%;
+    right: 25%;
+    text-align: center; 
+    background-color: transparent;
 }   
 
 .banner2{
@@ -83,6 +85,7 @@ button:hover{
     text-align: center;
     margin: 50px;
     font-size: xx-large;
+    color: black;
 }
 
 .serviciodescripcion{
@@ -91,13 +94,9 @@ button:hover{
     margin: auto;
     padding: 10px;
     width: 65%;
+    color: black;
 }
-=======
-    left: 25%;
-    right: 25%;
-    text-align: center; 
-    background-color: transparent;
-}   
+
 .cajas h1,p,div{
     background-color: transparent;
     color:#fff;
