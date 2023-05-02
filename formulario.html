@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="icon" type="image/x-icon" href="./img/logos/printifyicono.ico">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/66c85cf6ac.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <header class="header">
+        <nav>          
+            <div class="buttons">
+                <a class="link" href="index.html">Menú</a>
+                <a class="link" href="#">Contacto</a>
+                <a class="link" href="#">Proyectos</a>
+                <a class="link" href="#">Sobre Nosotros</a>
+            </div>  
+        </nav>
+        <img class="titulo" src="./img/logos/logocompleto.png" alt="">
+    </header>
+    
+    <main id="hero">
+
+        
+        <br>
+        
+        <form action="show_data.html" target="_blank">
+            <h2>Formulario de contacto</h2><br>
+            <label for="Nombre">Nombre:</label>
+            <input type="text" id="Nombre" name="Nombre" size="25" placeholder="Ingrese su nombre aquí..." class="campo">
+            <label for="Apellido">Apellido:</label>
+            <input type="text" id="Apellido" name="Apellido" size="25" placeholder="Ingrese su apellido aquí..." class="campo">
+            <label for="Fecha">Fecha Nac:</label>
+            <input type="date" id="Fecha" name="Fecha" class="campo"><br><br>
+            
+            <p class="texto">Direccion:</p><br>
+            
+            <label for="calle">Calle:</label>
+            <input type="text" id="calle" name="calle" size="25" placeholder="Ingrese su calle aquí..." class="campo">
+            
+            <label for="Numero">Numero:</label>
+            <input type="text" id="Numero" name="Numero" size="25" placeholder="Ingrese el número..." class="campo">
+            
+            
+            <label for="Ciudad">Ciudad:</label>
+            <input type="text" id="Ciudad" name="Ciudad" size="25" placeholder="Ingrese la ciudad aquí..." value="CABA" class="campo">
+            
+            <label for="Codigo_Postal">Código Postal:</label>
+            <input type="text" id="Codigo_Postal" name="Codigo_Postal" size="25" placeholder="Ingrese su código postal aquí..." class="campo"><br><br>
+            
+            
+            <label for="Telefono">Teléfono:</label>
+            <input type="text" id="Telefono" name="Telefono" size="25" placeholder="Ingrese su teléfono aquí..." class="campo">
+            <label for="Email">Mail:</label>
+            <input type="email" id="Email" name="Email" size="25" class="campo"><br><br>        
+            
+            
+            <p class="texto">Género (Radio)
+                <input type="radio" name="Genero" value="hombre" checked>Hombre
+                <input type="radio" name="Genero" value="Mujer">Mujer
+                <input type="radio" name="Genero" value="Otro"> Otro
+            </p><br>
+
+            <label for="Estudios">Estudios: (Select)</label>
+            <select id="Estudios" name="Estudios">
+                <option value="primaria">Primaria</option>
+                <option value="secundaria">Secundaria</option>
+                <option value="terciario">Terciario</option>
+                <option value="universitario">Universitario</option>
+                <option value="otros">Otro</option>
+            </select>
+        
+            <br><br>
+        
+            Comentarios: <br> <textarea name="Comentarios" rows="5" cols="30" placeholder="Escribe tu comentario..." class="campo"></textarea><br>
+            <input type="submit" value="Enviar">
+            <p class="texto">Si usted hace click en el boton "Enviar", la informacion sera enviada a la pagina "show_data_html".</p>
+        
+        
+        
+        </form>
+        <video autoplay loop muted>
+            <source src="./media/pexels-free-videos-853870-1920x1080-25fps.mp4" type="video/mp4">
+        </video>
+        <div class="video-container"></div>
+
+    </main>
+    
+    <footer class="footer">
+        <br>
+        <div class="buttons">
+            
+            <a class="icon" href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a class="icon" href="https://www.twitter.com" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a class="icon" href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a class="icon" href="https://www.pinterest.com" target="_blank"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+            <a class="icon" href="https://www.linkkedin.com" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            <a class="icon" href="https://www.github.com" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+        </div>
+        <br>
+        <p class="derecho">Derechos reservados @2023</p>
+        
+    </footer>
+    
+</body>
+</html>
