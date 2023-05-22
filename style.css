@@ -8,7 +8,7 @@
 
 /* HEADER */
 
-li, a, button{
+.links_nav li, a, button{
     font-family: 'Inter', sans-serif;
     font-weight: 500;
     font-size: 25px;
@@ -78,12 +78,9 @@ button:hover{
     right: 25%;
     text-align: center; 
     background-color: transparent;
+    color: white;
 }   
 
-.cajas h1,p,div{
-    background-color: transparent;
-    color:#fff;
-}
 .cajas h1{
     font-size: 4rem;
 }
@@ -172,6 +169,7 @@ button:hover{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    color: white;
 }
 
 .nosotros{
@@ -211,6 +209,89 @@ article h5{
 article p{
     font-size: 17px;
     margin-top: 30px;
+}
+
+/* SECCION 2*/
+
+.fila {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2em 1em;
+    margin: 10px 40px 0 0;
+    justify-content: center;
+}
+
+.fila h1{
+    width: 100%;
+    text-align: center;
+    font-size: 3.5em;
+    color: black;
+}
+
+.columna {
+    width: 360px;
+    padding: 0.5em 0;
+}
+
+.tarjeta{
+    box-shadow: 0 0 2.2em rgba(25, 0, 58, 0.15);
+    padding: 3.5em 1em;
+    border-radius: 0.6em;
+    color: black;
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: #ffffff;
+}
+
+.tarjeta .contenedor-imagen{
+    width: 8em;
+    height: 8em;
+    background-color: rgba(100, 173, 219, 1);
+    padding:  0.5em;
+    border-radius: 50%;
+    margin: 0 auto 2em auto;
+}
+
+.tarjeta img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+.tarjeta h3{
+    font-weight: 500;
+    text-align: center;
+}
+
+.tarjeta p{
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0.5 0 2em 0;
+    letter-spacing: 2px;
+}
+
+.icons{
+    width: 50%;
+    min-width: 180px;
+    margin: auto;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tarjeta a{
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.4em;
+}
+
+.tarjeta:hover{
+    background: linear-gradient(rgba(55, 112, 218, 0.4), rgb(90, 125, 190));
+    color: white;
+}
+
+.tarjeta:hover .contenedor-imagen{
+    transform: scale(1.15);
 }
 
 /* FOOTER */
