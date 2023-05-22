@@ -1,12 +1,12 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario</title>
+    <title>Printify</title>
     <link rel="icon" type="image/x-icon" href="./img/logos/printifyicono.ico">
-    <link rel="stylesheet" href="formulario.css">
+    <link rel="stylesheet" href="formularioEstilizado.css"> 
     <script src="https://kit.fontawesome.com/66c85cf6ac.js" crossorigin="anonymous"></script>
     
 </head>
@@ -16,7 +16,7 @@
             <div class="buttons">
                 <a class="link" href="index.html">Menú</a>
                 <a class="link" href="#">Contacto</a>
-                <a class="link" href="#">Proyectos</a>
+                <a class="link" href="tienda.html">Productos</a>
                 <a class="link" href="#">Sobre Nosotros</a>
             </div>  
         </nav>
@@ -24,45 +24,43 @@
     </header>
     
     <main id="hero">
-
-        
-        <br>
-        
-        <form action="show_data.html" target="_blank">
-            <h2>Formulario de contacto</h2><br>
-            <label for="Nombre">Nombre:</label>
-            <input type="text" id="Nombre" name="Nombre" size="25" placeholder="Ingrese su nombre aquí..." class="campo">
-            <label for="Apellido">Apellido:</label>
-            <input type="text" id="Apellido" name="Apellido" size="25" placeholder="Ingrese su apellido aquí..." class="campo">
-            <label for="Fecha">Fecha Nac:</label>
-            <input type="date" id="Fecha" name="Fecha" class="campo"><br><br>
+        <form target="_blank" id="form" action="https://formspree.io/f/xwkjzgpn" method="POST">
             
-            <p class="texto">Direccion:</p><br>
+            <h2>Formulario de contacto</h2><br>
+   
+            <label for="Nombre">Nombre:</label>
+            <input type="text" id="nombre" name="Nombre" placeholder="Ingrese su nombre aquí..." class="campo">
+            <label for="Apellido">Apellido:</label>
+            <input type="text" id="Apellido" name="Apellido" placeholder="Ingrese su apellido aquí..." class="campo">
+            <label for="Fecha">Fecha Nac:</label>
+            <input type="date" id="Fecha" name="Fecha Nac" class="campo"><br>
+            
+            <p class="texto">Dirección:</p><br>
             
             <label for="calle">Calle:</label>
-            <input type="text" id="calle" name="calle" size="25" placeholder="Ingrese su calle aquí..." class="campo">
+            <input type="text" id="Calle" name="Calle" placeholder="Ingrese su calle aquí..." class="campo">
             
-            <label for="Numero">Numero:</label>
-            <input type="text" id="Numero" name="Numero" size="25" placeholder="Ingrese el número..." class="campo">
+            <label for="Numero">Número:</label>
+            <input type="text" id="Numero" name="Número" placeholder="Ingrese el número..." class="campo">
             
             
             <label for="Ciudad">Ciudad:</label>
-            <input type="text" id="Ciudad" name="Ciudad" size="25" placeholder="Ingrese la ciudad aquí..." value="CABA" class="campo">
+            <input type="text" id="Ciudad" name="Ciudad" placeholder="Ingrese la ciudad aquí..." value="CABA" class="campo">
             
             <label for="Codigo_Postal">Código Postal:</label>
-            <input type="text" id="Codigo_Postal" name="Codigo_Postal" size="25" placeholder="Ingrese su código postal aquí..." class="campo"><br><br>
+            <input type="text" id="Codigo_Postal" name="Código Postal" placeholder="Ingrese su código postal aquí..." class="campo"><br><br>
             
             
             <label for="Telefono">Teléfono:</label>
-            <input type="text" id="Telefono" name="Telefono" size="25" placeholder="Ingrese su teléfono aquí..." class="campo">
+            <input type="text" id="Telefono" name="Télefono" placeholder="Ingrese su número de teléfono..." class="campo">
             <label for="Email">Mail:</label>
-            <input type="email" id="Email" name="Email" size="25" class="campo"><br><br>        
+            <input type="email" id="Email" name="Email" placeholder="example@gmail.com..." class="campo"><br>       
             
             
-            <p class="texto">Género (Radio)
-                <input type="radio" name="Genero" value="hombre" checked>Hombre
-                <input type="radio" name="Genero" value="Mujer">Mujer
-                <input type="radio" name="Genero" value="Otro"> Otro
+            <p class="texto" id="genero">Género (Radio)
+                <input type="radio" name="Género" value="hombre" checked>Hombre
+                <input type="radio" name="Género" value="Mujer">Mujer
+                <input type="radio" name="Género" value="Otro"> Otro
             </p><br>
 
             <label for="Estudios">Estudios: (Select)</label>
@@ -76,13 +74,33 @@
         
             <br><br>
         
-            Comentarios: <br> <textarea name="Comentarios" rows="5" cols="30" placeholder="Escribe tu comentario..." class="campo"></textarea><br>
-            <input type="submit" value="Enviar">
-            <p class="texto">Si usted hace click en el boton "Enviar", la informacion sera enviada a la pagina "show_data_html".</p>
-        
-        
-        
+            Comentario: <br>
+            <textarea id="Comentario" name="Comentario" rows="5" cols="30" placeholder="Escribe tu comentario..." class="campo"></textarea><br>
+            
+            <input type="submit" value="Enviar" class="envio">        
+    
         </form>
+        <script>
+            const $form = document.querySelector("#form")
+
+            $form.addEventListener("submit", handleSubmit)
+
+            async function handleSubmit(event){
+                event.preventDefault()
+                const form = new FormData(this)
+                const response = await fetch(this.action,{
+                    method:this.method,
+                    body: form,
+                    headers: { 
+                        "Accept":'aplication/json'
+                    }
+                })
+                if (response.ok){
+                    this.reset()
+                    alert("¡Gracias por elegir Printify! Hemos recibido exitosamente tus datos en nuestros servidores.")
+                }
+            }
+        </script>
         <video autoplay loop muted>
             <source src="./media/pexels-free-videos-853870-1920x1080-25fps.mp4" type="video/mp4">
         </video>
