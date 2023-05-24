@@ -52,7 +52,7 @@ button{
 }
 
 button:hover{
-    background-color: rgb(98, 160, 198);
+    background-color: rgba(100, 173, 219, 1);
     color: white;
 }
 .banner1 video{
@@ -114,7 +114,7 @@ button:hover{
     height: 100px;
 }
 .header {
-    background-color: rgb(133, 165, 185);
+    background-color: #ffff;
     
 }
 
@@ -142,7 +142,7 @@ button:hover{
 
 /* Footer */
 footer.footer,.derecho{
-  background-color: rgb(133, 165, 185);
+  background-color: rgba(100, 173, 219, 1);
   padding: 20px;
   text-align: center;
   color: #000;
