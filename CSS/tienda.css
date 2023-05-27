@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 *{
     margin:0;
     padding: 0;
@@ -8,24 +9,35 @@ header{
     position: sticky;
     top: 0;   
 }
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.links_nav li, a, button{
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: black;
+    text-decoration: none;
+}
 .logo_h{
-    width: 80%; 
+    width: 100%; 
     align-items: center;
     justify-content: center;
     display: flex;
 }
 .boton_h{
-    width: 10%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 1rem;
 }
 .boton_h button{
-    padding: 9px 25px;
+    padding: 1rem 1.5rem;
     background-color: rgba(100, 173, 219, 1);
     border: none;
-    border-radius: 50px;
+    border-radius: 4rem;
     cursor: pointer;
     transition: all 0.5s ease 0s;
 }
@@ -37,21 +49,18 @@ button:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100px
+    width: 20%;
 }
 .lista-prod{
-    width: 100%;
-    height: 50px;
+    width: 80%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background-color: #000;
 }
 li, a{
     font-weight: 500;
-    color: #fff;
+    color: #000;
     text-decoration: none;
     list-style: none;
 }
@@ -59,7 +68,7 @@ li, a{
     list-style: none;
 }
 .links_nav li{
-    padding: 0px 20px;
+    padding: 0px 2rem;
     display: inline-block;
 }
 .links_nav li a{
@@ -70,26 +79,26 @@ li, a{
 }
 .contenedor{
     max-width: 1200px;
-    padding: 10px;
+    padding: 1rem;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 .contenedor .contenedor-prod{
-    margin-top: 30px;
+    margin-top: 2rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
-    grid-gap: 30px;
-    grid-row-gap:30px ;
+    grid-gap: 2rem;
+    grid-row-gap:2rem ;
     width: 100%;
     transition: .3s;
 }
 .contenedor .contenedor-prod .productos{
     max-width: 200px;
-    padding: 10px;
+    padding: 1rem;
     margin: auto;
-    border-radius: 20px;
+    border-radius: 3rem;
     transition: .3s;
 }
 .contenedor-prod .productos:hover{
@@ -102,7 +111,6 @@ li, a{
 .contenedor-prod .productos h3{
     display: block;
     text-align: center;
-    text-transform: uppercase;
 }
 .contenedor-prod .productos .precio {
     display: block;
@@ -110,12 +118,12 @@ li, a{
 }
  .boton-agregar{
     display: block;
-    margin: 10px auto;
+    margin: 1rem auto;
     border: none;
     background-color:#000;
     color: #fff;
-    padding: 5px 15px;
-    border-radius: 5px;
+    padding: 1rem 1.5rem;
+    border-radius: 2rem;
     cursor: pointer;
 }
 .articulo{
@@ -128,16 +136,14 @@ li, a{
     background-color: rgba(100, 173, 219, 1);  
 }
 img{
-    border-radius: 25px;
+    border-radius: 2rem;
 }
-
-
 .compras{
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #000;    
+    background-color: #0a1a2a;   
 }
 .contenedor-carrito{
     width: 50%;
@@ -148,7 +154,7 @@ img{
     color: #fff;
 }
 .contenedor-carrito h2{
-    margin-top: 30px;
+    margin-top: 3rem;
 }
 #carrito-productos{
     margin: 0;
@@ -159,12 +165,12 @@ img{
     text-align: center;
 } 
 .boton-c{
-    margin: 10px auto;
+    margin: 1rem auto;
     border: none;
     background-color:#666;
     color: #000;
-    padding: 5px 15px;
-    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
 }
 .pagar{
     width: 100%;
@@ -181,5 +187,70 @@ img{
     align-items: center;
     justify-content: center;
     text-align: center; 
+    margin-top: 3rem;
+}
+footer{
+    width: 100%;
+    background-color:#fff ;
+    color: #000;
+} 
+.pie-pag{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.box-red {
+    width:50%;
+    margin: 0 auto;
     margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.box-red i{
+    color: #0a1a2a;
+    font-size: 1rem;
+}
+.box-red a:hover {
+      transform: scale(1.5);
+}
+.box1{
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    margin-top: 30px;
+    padding: 0;
+    background-color: #0a1a2a;  
+}
+.box2{
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    padding: 0;
+    background-color: #0a1a2a;
+}
+.box2 small{
+    font-size: 12px;
+    height: 20px;
+}
+@media (min-width: 1024px) {
+    .box-red i{
+        font-size: 1.5rem;
+    }
+}
+@media (max-width: 480px){
+    footer{
+        margin-top: 210px;
+    }
+    .box-logo{
+        width: 80px;
+    }
+    .box1{
+        font-size: 13px;
+    }
 }

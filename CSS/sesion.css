@@ -1,0 +1,442 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(to right, #000, rgba(100, 173, 219, 1));
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+}
+main{
+    width: 100%;
+    height: 100vh;
+}
+nav{
+    background-color: #fff;
+    width: 100%;
+    height: 100px;
+}
+.enlace{
+    position: absolute;
+}
+nav ul{
+    float: right;
+    margin-right: 2rem;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 100px;
+    margin: 0 0.5rem;
+}
+nav ul li a{
+    color: #000;
+    font-size: 18px;
+    padding: 7px 14px;  
+}
+li a:hover{
+    color:  rgba(100, 173, 219, 1); 
+    transition: .5s;
+}
+.checkbtn{
+    font-size: 30px;
+    color: #000;
+    float: right;
+    line-height: 100px;
+    margin-right: 3rem;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+.container-form {
+    width: 100%;
+    margin: 0;
+    margin-top: 15rem;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    transition:  all .5s ease-out;   
+}
+.welcome-back {
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.message {
+    padding: 1rem;
+}
+.message h2 {
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 900;
+    padding: 1rem 0;
+}
+.message p{
+    color: #fff;
+    font-weight: 400;;
+}
+.message button {
+    padding: 1rem;
+    font-weight: 400;
+    border-radius: 2rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: .9rem;
+    margin-top: 2rem;
+    transition: all .3s ease-in;
+    color: #fff;
+    background-color:#000 ;
+}
+button:hover {
+    background-color:  rgba(100, 173, 219, 1); 
+}
+.formulario-in {
+    width: 400px;
+    height: 400px;
+    padding: 1rem;
+    margin: 2rem;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 2rem; 
+    border: none;  
+    color: #000;
+}
+.create-account {
+    padding: 2.7rem 0;
+    font-size: 1.7rem;
+}
+.formulario-in ::placeholder {
+    color: #000;;
+}
+.formulario-in input {
+    width: 70%;
+    display: block;
+    margin: auto;
+    margin-bottom: 2rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: black thin solid;
+    text-align: center;
+    outline: none;
+    padding: .2rem 0;
+    font-size: .9rem;
+    color: black;
+}
+.formulario-in button[type="submit"] {
+    width: 60%;
+    margin: auto;
+    border: none;
+    padding: .7rem;
+    border-radius: 2rem;
+    background-color: black;
+    font-weight: 600;
+    margin-top: 3rem;
+    font-size: .8rem;
+    cursor: pointer;
+    transition: all .3s ease-in;
+    color: #fff
+}
+.formulario-in button:hover {
+    background-color:  rgba(100, 173, 219, 1); 
+}
+footer{
+    width: 100%;
+    background-color:#fff ;
+    color: #000;
+  } 
+.pie-pag{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.box-red {
+    width:50%;
+    margin: 0 auto;
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.box-red i{
+    color: #0a1a2a;
+    font-size: 1rem;
+}
+.box-red a:hover {
+      transform: scale(1.5);
+}
+.box1{
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    margin-top: 30px;
+    padding: 0;
+    background-color: #0a1a2a;  
+}
+.box2{
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    padding: 0;
+    background-color: #0a1a2a;
+}
+.box2 small{
+    font-size: 12px;
+    height: 20px;
+}
+@media (min-width: 1024px) {
+    nav ul li a{
+        font-size: 20px; 
+    }
+    .message h2 {
+        font-size: 4rem;
+    }
+    .message p{
+        font-weight: 400;
+        font-size: 20px;
+    }
+    .message button {
+        padding: 1.2rem;
+        font-weight: 600;
+        border-radius: 5rem;
+        font-size: 1rem;
+        margin-top: 1rem;
+    } 
+    .formulario-up {
+        width: 500px;
+        height: 500px;
+        margin: 0;
+        padding: 0; 
+    }
+    
+    .formulario-in {
+        width: 500px;
+        height: 400px;
+        margin: 0;
+        padding: 0;
+    }
+    .create-account {
+        padding: 2rem 0;
+        font-size: 2.5rem;
+    }
+    .formulario-up input {
+        margin-bottom: 1rem;
+        padding: 1rem 0;
+        font-size: 1rem; 
+    }
+    .formulario-in input {
+        margin-bottom: 1rem;
+        padding: 1rem 0;
+        font-size: 1rem;
+    }
+    
+    .formulario-up button[type="submit"] {
+        padding: 1rem;
+        margin-top: 2rem;
+        font-size: 1rem;
+    }
+    .formulario-in button[type="submit"] {
+        padding: 1rem;
+        margin-top: 2rem;
+        font-size: 1rem;
+
+    }
+    .box-red i{
+        font-size: 1.5rem;
+    }
+
+}
+@media (max-width: 760px){
+   
+    nav ul li a{
+        font-size: 18px;
+        padding: 7px 0;  
+    }
+    .container-form{
+        display: flex;
+        flex-direction: column;
+        margin-top: 6rem;
+    }
+    .message{
+        width: 100%;
+        margin:0;
+    }
+    .message h2 {
+        font-size: 3rem;
+        font-weight: 900;
+        padding: 1rem 0;
+    }
+    .message p{
+        font-weight: 400;
+        font-size: 15px;
+    }
+    .message button {
+        padding: 1rem;
+        font-weight: 400;
+        border-radius: 5rem;
+        font-size: 1rem;
+        margin-top: 1rem;
+    }
+    .formulario-up {
+        width: 350px;
+        height: 300px;
+        margin: 0;
+        padding: 0; 
+    }
+    
+    .formulario-in {
+        width: 350px;
+        height: 300px;
+        margin: 0;
+        padding: 0;
+    }
+    .create-account {
+        padding: 1.5rem 0;
+        font-size: 2rem;
+    }
+    .formulario-up input {
+        margin-bottom: 1rem;
+        padding: .1rem 0;
+        font-size: .9rem; 
+    }
+    .formulario-in input {
+        margin-bottom: 1rem;
+        padding: .1rem 0;
+        font-size: .9rem;
+    }
+    
+    .formulario-up button[type="submit"] {
+        padding: .6rem;
+        margin-top: 1.5rem;
+        font-size: .9rem;
+    }
+    .formulario-in button[type="submit"] {
+        padding: .6rem;
+        margin-top:1.5rem;
+        font-size: .9rem;
+
+    }
+
+}
+@media (max-width: 480px){
+    main{
+        height: 40vh;
+    }
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        background-color:  rgba(100, 173, 219, 1); 
+        top: 100px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 1rem;
+    }
+    nav ul li a{
+        font-size: 20px;
+    } 
+    li a:hover{
+        color: #000;
+    }
+
+    #check:checked ~ ul{
+        left: 0;
+    }
+    .container-form{
+        display: flex;
+        flex-direction: column;
+        margin-top: 4rem;
+    }
+    .message{
+        width: 100%;
+        margin:0;
+    }
+    .message h2 {
+        font-size: 1rem;
+        font-weight: 900;
+        padding: 1rem 0;
+    }
+    .message p{
+        font-weight: 400;
+        font-size: 12px;
+    }
+    .message button {
+        padding: .5rem;
+        font-weight: 400;
+        border-radius: 1rem;
+        font-size: .6rem;
+        margin-top: 1rem;
+    }
+    .formulario-up {
+        width: 250px;
+        height: 250px;
+        margin: 0;
+        padding: 0; 
+    }
+    
+    .formulario-in {
+        width: 250px;
+        height: 250px;
+        margin: 0;
+        padding: 0;
+    }
+    .create-account {
+        padding: 1.5rem 0;
+        font-size: 1rem;
+    }
+    .formulario-up input {
+        margin-bottom: 1rem;
+        padding: .1rem 0;
+        font-size: .6rem; 
+    }
+    .formulario-in input {
+        margin-bottom: 1rem;
+        padding: .1rem 0;
+        font-size: .6rem;
+    }
+    
+    .formulario-up button[type="submit"] {
+        padding: .3rem;
+        margin-top: .3rem;
+        font-size: .6rem;
+    }
+    .formulario-in button[type="submit"] {
+        padding: .3rem;
+        margin-top: .3rem;
+        font-size: .6rem;
+
+    }
+    footer{
+        margin-top: 210px;
+    }
+    .box-logo{
+        width: 80px;
+    }
+    .box1{
+        font-size: 13px;
+    }
+
+}

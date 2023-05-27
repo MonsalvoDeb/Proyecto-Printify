@@ -11,49 +11,49 @@
 </head>
 <body>
     <header class="header">
-        <nav>          
-            <div class="buttons">
-                <a class="link" href="../index.html">Menú</a>
-                <a class="link" href="#">Contacto</a>
-                <a class="link" href="../HTML/tienda.html">Productos</a>
-                <a class="link" href="#">Sobre Nosotros</a>
-            </div>  
+        <img class="logo" src="../img/logos/logocompleto.png" alt="" width="200px" height="100px">
+        <nav>
+            <ul class="links_nav">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./tienda.html">Productos</a></li>
+                
+            </ul>
         </nav>
-        <img class="titulo" src="../img/logos/logocompleto.png" alt="">
+        <a class="cta" href="./sesion.html"><button>Iniciar sesión</button></a>
     </header>
     
     <main id="hero">
-        <form target="_blank" id="form" action="https://formspree.io/f/xwkjzgpn" method="POST">
+      
+        <form target="_blank" id="form" action="https://formspree.io/f/xbjeezaj" method="POST">
             
             <h2>Formulario de contacto</h2><br>
    
-            <label for="Nombre">Nombre:</label>
-            <input type="text" id="nombre" name="Nombre" placeholder="Ingrese su nombre aquí..." class="campo">
-            <label for="Apellido">Apellido:</label>
-            <input type="text" id="Apellido" name="Apellido" placeholder="Ingrese su apellido aquí..." class="campo">
-            <label for="Fecha">Fecha Nac:</label>
-            <input type="date" id="Fecha" name="Fecha Nac" class="campo"><br>
+            <label for="nombre">Nombre y Apellido<span>*</span></label> 
+            <input type="text" id="nombre" name="Nombre y Apellido" placeholder="Ingrese su nombre y Apellido..." class="campo" required>
+
+            <label for="Fecha">Fecha Nac<span>*</span></label>
+            <input type="date" id="Fecha" name="Fecha Nac" class="campo" required><br>
             
             <p class="texto">Dirección:</p><br>
             
-            <label for="calle">Calle:</label>
-            <input type="text" id="Calle" name="Calle" placeholder="Ingrese su calle aquí..." class="campo">
+            <label for="Calle">Calle<span>*</span></label>
+            <input type="text" id="Calle" name="Calle" placeholder="Ingrese su calle aquí..." class="campo" required>
             
-            <label for="Numero">Número:</label>
-            <input type="text" id="Numero" name="Número" placeholder="Ingrese el número..." class="campo">
-            
-            
-            <label for="Ciudad">Ciudad:</label>
-            <input type="text" id="Ciudad" name="Ciudad" placeholder="Ingrese la ciudad aquí..." value="CABA" class="campo">
-            
-            <label for="Codigo_Postal">Código Postal:</label>
-            <input type="text" id="Codigo_Postal" name="Código Postal" placeholder="Ingrese su código postal aquí..." class="campo"><br><br>
+            <label for="Numero">Número<span>*</span></label>
+            <input type="text" id="Numero" name="Número" placeholder="Ingrese el número..." class="campo" required>
             
             
-            <label for="Telefono">Teléfono:</label>
-            <input type="text" id="Telefono" name="Télefono" placeholder="Ingrese su número de teléfono..." class="campo">
-            <label for="Email">Mail:</label>
-            <input type="email" id="Email" name="Email" placeholder="example@gmail.com..." class="campo"><br>       
+            <label for="Ciudad">Ciudad<span>*</span></label>
+            <input type="text" id="Ciudad" name="Ciudad" placeholder="Ingrese la ciudad aquí..." value="CABA" class="campo" required>
+            
+            <label for="Codigo_Postal">Código Postal<span>*</span></label>
+            <input type="text" id="postal" name="Código Postal" placeholder="Ingrese su código postal aquí..." class="campo" required><br><br>
+            
+            
+            <label for="Telefono">Teléfono<span>*</span></label>
+            <input type="text" id="Telefono" name="Télefono" placeholder="Ingrese su número de teléfono..." class="campo" required>
+            <label for="Email">Mail<span>*</span></label>
+            <input type="email" id="Email" name="Email" placeholder="example@gmail.com..." class="campo" required><br>       
             
             
             <p class="texto" id="genero">Género (Radio)
@@ -74,32 +74,12 @@
             <br><br>
         
             Comentario: <br>
-            <textarea id="Comentario" name="Comentario" rows="5" cols="30" placeholder="Escribe tu comentario..." class="campo"></textarea><br>
+            <textarea id="Comentario" name="Comentario" rows="5" cols="30" placeholder="Escribe tu comentario..." class="campo"></textarea>
             
             <input type="submit" value="Enviar" class="envio">        
     
         </form>
-        <script>
-            const $form = document.querySelector("#form")
-
-            $form.addEventListener("submit", handleSubmit)
-
-            async function handleSubmit(event){
-                event.preventDefault()
-                const form = new FormData(this)
-                const response = await fetch(this.action,{
-                    method:this.method,
-                    body: form,
-                    headers: { 
-                        "Accept":'aplication/json'
-                    }
-                })
-                if (response.ok){
-                    this.reset()
-                    alert("¡Gracias por elegir Printify! Hemos recibido exitosamente tus datos en nuestros servidores.")
-                }
-            }
-        </script>
+        <script src="../JS/form.js"></script>
         <video autoplay loop muted>
             <source src="../media/pexels-free-videos-853870-1920x1080-25fps.mp4" type="video/mp4">
         </video>
@@ -107,21 +87,29 @@
 
     </main>
     
-    <footer class="footer">
-        <br>
-        <div class="buttons">
-            
-            <a class="icon" href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-            <a class="icon" href="https://www.twitter.com" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-            <a class="icon" href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-            <a class="icon" href="https://www.pinterest.com" target="_blank"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-            <a class="icon" href="https://www.linkkedin.com" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-            <a class="icon" href="https://www.github.com" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
-        </div>
-        <br>
-        <p class="derecho">Derechos reservados @2023</p>
-        
+    <footer>
+        <section class="pie-pag">
+            <div class="box">
+                <figure>
+                        <img class="box-logo"src="../img/logos/logo.png" alt="Logo de Printify" width="180px" >
+                </figure>
+            </div>
+            <div class="box-red">
+                <a class="icon" href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a class="icon" href="https://www.twitter.com" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a class="icon" href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a class="icon" href="https://www.pinterest.com" target="_blank"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                <a class="icon" href="https://www.linkkedin.com" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                <a class="icon" href="https://github.com/MonsalvoDeb/Proyecto-Printify.git" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+            </div>
+            <div class="box1">
+                <p>Politicas de privacidad | Newsleter | Contacto</p>
+            </div>
+            <div class="box2">
+                <small> &copy; 2023 <b>Printify</b> - Todos los Derechos Reservados.</small>    
+            </div>
+        </section>   
     </footer>
-    
+
 </body>
 </html>

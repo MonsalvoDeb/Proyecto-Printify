@@ -1,74 +1,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
-
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-
-/* HEADER */
-
 .links_nav li, a, button{
     font-family: 'Inter', sans-serif;
     font-weight: 500;
-    font-size: 25px;
+    font-size: 18px;
     color: black;
     text-decoration: none;
 }
-
 header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 10%;
+    padding: 0px 10%; 
+    background-color: #fff;
 }
-
 .logo{
     margin-bottom: 20px;
     cursor: pointer;
 }
-
 .links_nav{
     list-style: none;
 }
-
 .links_nav li{
     padding: 0px 20px;
     display: inline-block;
 }
-
 .links_nav li a{
     transition: all 0.5s ease 0s;
 }
-
 .links_nav li a:hover{
     color: rgba(100, 173, 219, 1);
 }
-
 button{
-    padding: 9px 25px;
+    padding: 1rem 1.5rem;
     background-color: rgba(100, 173, 219, 1);
     border: none;
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.5s ease 0s;
 }
-
 button:hover{
     background-color: rgb(98, 160, 198);
     color: white;
 }
-
-/* BANNER */
-
 .banner1 video{
     width: 100%;
     margin: 0;
     padding: 0;
-    position: relative;
     filter: blur(5px);
 }
-
 .cajas{
     padding: 0;
     margin: 0;
@@ -79,48 +63,38 @@ button:hover{
     text-align: center; 
     background-color: transparent;
     color: white;
-}   
-
+}
 .cajas h1{
-    font-size: 4rem;
+    font-size: 3.4rem;
 }
 .cajas p,div{
     font-size: 1.5rem;
 }
-
 .banner2{
     height: 100vh;
     background-color: white;
     box-sizing: border-box;
 }
-
-/* SECCION */
-
 .container {
     width: 100%;
     text-align: center;
 }
-
 .header {
     padding-top: 40px;
-    color: #444;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #000;
     font-size: 20px;
     margin: auto;
-    line-height: 110px;
+    line-height: 100px;
 }
-
 .header2 {
-    padding-top: 30px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #444;
+    padding-top: 20px;
+    color: #000;
     font-size: 15px;
     margin: auto;
     line-height: 40px;  
     box-sizing: border-box;
     width: 100vh;
 }
-
 .sub-container {
     max-width: 1400px;
     margin: auto;
@@ -129,7 +103,6 @@ button:hover{
     flex-wrap: wrap;
     justify-content: center;
 }
-
 .cajas2 {
     margin: 20px;
     padding-top: 60px;
@@ -138,30 +111,25 @@ button:hover{
     transition: 0.4s;
     box-sizing: border-box;
 }
-
 .cajas2:hover {
     background: #ddd;
-    border-radius: 12px;
+    border-radius: 2rem;
 }
-
 .cajas2titulo {
     color: black;
-    padding: 12px;
+    padding: 15px;
     margin-top: 10px;
-    font-size: 30px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 25px;
     text-transform: uppercase;
 }
-
 .cajas2parrafo {
-    margin: 20px 0;
-    font-size: 24px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 25px 0;
+    padding: 15px;
+    font-size: 20px;
     font-weight: lighter;
     color: #4e4e4e;
 }
-
-/* SOBRE NOSOTROS */
-
 .sobre{
     min-height: 95vh;
     width: 100%;
@@ -171,20 +139,16 @@ button:hover{
     background-size: cover;
     color: white;
 }
-
 .nosotros{
     padding: 15vh 100px;
     justify-content: center;
     text-align: center;
 }
-
-article h1{
+article h2{
     font-size: 50px;
-    font-weight: 800;
-    text-transform: uppercase;
+    font-weight: 800;   
 }
-
-article h1:after{
+article h2:after{
     content: "";
     height: 5px;
     width: 225px;
@@ -192,57 +156,48 @@ article h1:after{
     display: block;
     margin: auto;
 }
-
 blockquote{
-    font-family: sans-serif;
+    padding: 0 6rem;
     font-size: 25px;
     margin-top: 50px;
 }
-
 article h5{
     text-transform: uppercase;
     font-size: 28px;
     margin-top: 50px;
     letter-spacing: 1.5px;
 }
-
 article p{
     font-size: 17px;
     margin-top: 30px;
 }
-
-/* SECCION 2*/
-
 .fila {
+    background-color: gainsboro;
     display: flex;
     flex-wrap: wrap;
-    padding: 2em 1em;
-    margin: 10px 40px 0 0;
+    padding: 1em .5rem;
     justify-content: center;
 }
-
-.fila h1{
+.fila h2{
+    margin-top: 4rem;
     width: 100%;
     text-align: center;
-    font-size: 3.5em;
+    font-size: 3rem;
     color: black;
 }
-
 .columna {
-    width: 360px;
-    padding: 0.5em 0;
+    width: 300px;
+    padding: 0.5rem 0;
 }
-
 .tarjeta{
-    box-shadow: 0 0 2.2em rgba(25, 0, 58, 0.15);
-    padding: 3.5em 1em;
-    border-radius: 0.6em;
+    box-shadow: 0 0 2.2rem rgba(25, 0, 58, 0.15);
+    padding: 4rem 1rem;
+    border-radius: 2rem;
     color: black;
     cursor: pointer;
     transition: 0.3s;
     background-color: #ffffff;
 }
-
 .tarjeta .contenedor-imagen{
     width: 8em;
     height: 8em;
@@ -251,112 +206,108 @@ article p{
     border-radius: 50%;
     margin: 0 auto 2em auto;
 }
-
 .tarjeta img{
     width: 100%;
     border-radius: 50%;
 }
-
 .tarjeta h3{
+    font-size: 1.5rem;
     font-weight: 500;
     text-align: center;
 }
-
 .tarjeta p{
+    font-size: 1rem;
     font-weight: 300;
     text-transform: uppercase;
     text-align: center;
     margin: 0.5 0 2em 0;
     letter-spacing: 2px;
 }
-
 .icons{
     width: 50%;
     min-width: 180px;
     margin: auto;
     margin-top: 10px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
-
+.icons a{
+    margin: .5rem;
+}
 .tarjeta a{
     text-decoration: none;
     color: inherit;
     font-size: 1.4em;
 }
-
 .tarjeta:hover{
     background: linear-gradient(rgba(55, 112, 218, 0.4), rgb(90, 125, 190));
     color: white;
 }
-
 .tarjeta:hover .contenedor-imagen{
     transform: scale(1.15);
 }
-
-/* FOOTER */
-
-.pie-pagina{
+footer{
     width: 100%;
-    background-color: #0a141d;
+    background-color:#fff ;
+    color: #000;
+  } 
+.pie-pag{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
 }
-.pie-pagina .grupo-1{
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
-    display:grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap:50px;
-    padding: 45px 0px;
+.box-red {
+    width:50%;
+    margin: 0 auto;
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
-.pie-pagina .grupo-1 .box figure{
-    width: 100%;
-    height: 100%;
+.box-red i{
+    color: #0a1a2a;
+    font-size: 1rem;
+}
+.box-red a:hover {
+      transform: scale(1.5);
+}
+.box1{
+    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 40px;
+    margin-top: 30px;
+    padding: 0;
+    background-color: #0a1a2a;  
 }
-.pie-pagina .grupo-1 .box figure img{
-    width: 250px;
-}
-.pie-pagina .grupo-1 .box h2{
+.box2{
     color: #fff;
-    margin-bottom: 25px;
-    font-size: 20px;
-}
-.pie-pagina .grupo-1 .box p{
-    color: #efefef;
-    margin-bottom: 10px;
-}
-.pie-pagina .grupo-1 .red-social a{
-    display: inline-block;
-    text-decoration: none;
-    width: 45px;
-    height: 45px;
-    line-height: 45px;
-    color: #fff;
-    margin-right: 10px;
-    background-color: #0d2033;
-    text-align: center;
-    transition: all 300ms ease;
-}
-.pie-pagina .grupo-1 .red-social a:hover{
-    color: aqua;
-}
-.pie-pagina .grupo-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    padding: 0;
     background-color: #0a1a2a;
-    padding: 15px 10px;
-    text-align: center;
-    color: #fff;
 }
-.pie-pagina .grupo-2 small{
-    font-size: 15px;
+.box2 small{
+    font-size: 12px;
+    height: 20px;
 }
-@media screen and (max-width:800px){
-    .pie-pagina .grupo-1{
-        width: 90%;
-        grid-template-columns: repeat(1, 1fr);
-        grid-gap:30px;
-        padding: 35px 0px;
+@media (min-width: 1024px) {
+    .box-red i{
+        font-size: 1.5rem;
+    }
+}
+@media (max-width: 480px){
+    footer{
+        margin-top: 210px;
+    }
+    .box-logo{
+        width: 80px;
+    }
+    .box1{
+        font-size: 13px;
     }
 }
